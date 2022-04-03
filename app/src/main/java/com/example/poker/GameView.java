@@ -24,13 +24,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         getHolder().addCallback(this);
 
-        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin1), 300, 300);
-        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin5), 150, 150);
-        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin10), 150, 150);
-        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin25), 150, 150);
-        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin100), 150, 150);
-
-
+        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin1), 210, 200);
+        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin5), 210, 200);
+        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin10), 210, 200);
+        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin25), 210, 200);
+        coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin100), 210, 200);
 
         characterSprite = new CharacterSprite(BitmapFactory.decodeResource(getResources(), R.drawable.dog));
         background = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.blackjack3));
