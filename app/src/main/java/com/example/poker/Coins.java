@@ -1,24 +1,24 @@
 package com.example.poker;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
+import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.MotionEvent;
-import android.view.SurfaceView;
+import android.view.View;
 
 import java.util.ArrayList;
 
-public class Coins {
+public class Coins implements View.OnClickListener {
 
     private int screenWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
     private int screenHeight = Resources.getSystem().getDisplayMetrics().heightPixels;
 
     private int x = 20;
+    private int getX = 0;
+    private int getY = 0;
 
     ArrayList<Bitmap> bitmapCoins = new ArrayList<Bitmap>();
 
@@ -43,6 +43,13 @@ public class Coins {
         paint.setTextSize(50);
         canvas.drawText("Some Text:"+screenWidth, 10, 50, paint);
         canvas.drawText("Some Text:"+screenHeight, 10, 120, paint);
+
+        canvas.drawText("Some X: "+getX, 10, 150, paint);
     }
 
+
+    @Override
+    public void onClick(View view) {
+        getX++;
+    }
 }
