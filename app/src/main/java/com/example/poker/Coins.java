@@ -30,11 +30,11 @@ public class Coins {
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawBitmap(bitmapCoins.get(0), x, screenHeight-bitmapCoins.get(0).getHeight()-200, null);
-        canvas.drawBitmap(bitmapCoins.get(1), x+bitmapCoins.get(0).getWidth()*1, screenHeight-bitmapCoins.get(0).getHeight()-200, null);
-        canvas.drawBitmap(bitmapCoins.get(2), x+bitmapCoins.get(0).getWidth()*2, screenHeight-bitmapCoins.get(0).getHeight()-200, null);
-        canvas.drawBitmap(bitmapCoins.get(3), x+bitmapCoins.get(0).getWidth()*3, screenHeight-bitmapCoins.get(0).getHeight()-200, null);
-        canvas.drawBitmap(bitmapCoins.get(4), x+bitmapCoins.get(0).getWidth()*4, screenHeight-bitmapCoins.get(0).getHeight()-200, null);
+        canvas.drawBitmap(bitmapCoins.get(0), x, screenHeight-bitmapCoins.get(0).getHeight()*2, null);
+        canvas.drawBitmap(bitmapCoins.get(1), x+bitmapCoins.get(0).getWidth()*1, screenHeight-bitmapCoins.get(0).getHeight()*2, null);
+        canvas.drawBitmap(bitmapCoins.get(2), x+bitmapCoins.get(0).getWidth()*2, screenHeight-bitmapCoins.get(0).getHeight()*2, null);
+        canvas.drawBitmap(bitmapCoins.get(3), x+bitmapCoins.get(0).getWidth()*3, screenHeight-bitmapCoins.get(0).getHeight()*2, null);
+        canvas.drawBitmap(bitmapCoins.get(4), x+bitmapCoins.get(0).getWidth()*4, screenHeight-bitmapCoins.get(0).getHeight()*2, null);
 
 
         Paint paint = new Paint();
