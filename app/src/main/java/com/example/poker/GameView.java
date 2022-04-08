@@ -16,13 +16,17 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     private MainThread thread;
     private CharacterSprite characterSprite;
-    private Coins coins = new Coins();;
+    private Coins coins = new Coins();
+    private Buttons buttons = new Buttons();
     private Background background;
 
     public GameView(MainActivity context) {
         super(context);
 
         getHolder().addCallback(this);
+
+        buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_deal), screenWidth/5, 114);
+        buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_hit), 144, 114);
 
         coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin1), screenWidth/5, screenWidth/5);
         coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin5), screenWidth/5, screenWidth/5);
@@ -31,7 +35,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin100), screenWidth/5, screenWidth/5);
 
         characterSprite = new CharacterSprite(BitmapFactory.decodeResource(getResources(), R.drawable.dog));
-        background = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.blackjack3));
+        background = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.blackjack1));
         thread = new MainThread(getHolder(), this);
         setFocusable(true);
     }
@@ -74,6 +78,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             background.draw(canvas);
             characterSprite.draw(canvas);
             coins.draw(canvas);
+            buttons.draw(canvas);
         }
     }
 }
