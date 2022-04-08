@@ -1,10 +1,12 @@
 package com.example.poker;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.view.SurfaceView;
 
 public class BetWin {
 
@@ -13,16 +15,26 @@ public class BetWin {
 
     Bitmap btCredit;
     Bitmap btBet;
+    private int ybutton;
 
-    public void Init (){
+    public void Init (Context cnt){
 
+        ybutton = 0;
 //        bitmapButtonsInit = Bitmap.createScaledBitmap(bitmapButtonsInit, screenWidth, screenHeight, true);
-        btBet = BitmapFactory.decodeResource(mResources, R.drawable.bet);
-
+        btBet = BitmapFactory.decodeResource(cnt.getResources(), R.drawable.bet);
+        btBet = Bitmap.createScaledBitmap(btBet, 518, 120, true);
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawBitmap(btBet, screenWidth/2-btBet.getWidth()/2, screenHeight - btBet.getHeight()*3, null);
+        canvas.drawBitmap(btBet, screenWidth/2-btBet.getWidth()/2, screenHeight-getButtonY(), null);
+    }
+
+
+    public int getButtonY(){
+        return ybutton;
+    }
+    public void setButtonY(int y){
+        ybutton = y;
     }
 
 }

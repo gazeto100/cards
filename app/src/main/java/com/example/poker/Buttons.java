@@ -13,12 +13,15 @@ public class Buttons {
     private int screenWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
     private int screenHeight = Resources.getSystem().getDisplayMetrics().heightPixels;
 
+    BetWin betWin = new BetWin();
 
     public void Init(Bitmap bitmapButtonsInit, int screenWidth, int screenHeight){
 
 //        bitmapButtonsInit = Bitmap.createScaledBitmap(bitmapButtonsInit, screenWidth, screenHeight, true);
 
         bitmapButtons.add(bitmapButtonsInit);
+
+        betWin.setButtonY(bitmapButtons.get(0).getHeight()*3);
 
     }
 

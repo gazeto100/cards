@@ -27,7 +27,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         getHolder().addCallback(this);
 
-        betwin.Init();
+
 
         buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_deal), screenWidth/5, 114);
         buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_hit), 144, 114);
@@ -39,6 +39,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         coins.Init(BitmapFactory.decodeResource(getResources(), R.drawable.coin100), screenWidth/5, screenWidth/5);
 
         characterSprite = new CharacterSprite(BitmapFactory.decodeResource(getResources(), R.drawable.dog));
+        betwin.Init(context);
         background = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.blackjack1));
         thread = new MainThread(getHolder(), this);
         setFocusable(true);
