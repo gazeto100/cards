@@ -19,11 +19,15 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private Coins coins = new Coins();
     private Buttons buttons = new Buttons();
     private Background background;
+    private BetWin betwin = new BetWin();
+
 
     public GameView(MainActivity context) {
         super(context);
 
         getHolder().addCallback(this);
+
+        betwin.Init();
 
         buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_deal), screenWidth/5, 114);
         buttons.Init(BitmapFactory.decodeResource(getResources(), R.drawable.button_hit), 144, 114);
@@ -77,6 +81,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         if (canvas != null) {
             background.draw(canvas);
             characterSprite.draw(canvas);
+            betwin.draw(canvas);
             coins.draw(canvas);
             buttons.draw(canvas);
         }
