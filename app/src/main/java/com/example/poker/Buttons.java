@@ -21,7 +21,7 @@ public class Buttons {
 
         bitmapButtons.add(bitmapButtonsInit);
 
-        betWin.setButtonY(bitmapButtons.get(0).getHeight()*3);
+        betWin.setButtonY(bitmapButtons.get(0).getHeight());
 
     }
 

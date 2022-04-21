@@ -22,11 +22,14 @@ public class BetWin {
         ybutton = 0;
 //        bitmapButtonsInit = Bitmap.createScaledBitmap(bitmapButtonsInit, screenWidth, screenHeight, true);
         btBet = BitmapFactory.decodeResource(cnt.getResources(), R.drawable.bet);
-        btBet = Bitmap.createScaledBitmap(btBet, 518, 140, true);
+        btCredit = BitmapFactory.decodeResource(cnt.getResources(), R.drawable.credit);
+        btBet = Bitmap.createScaledBitmap(btBet, screenWidth/2, 180, true);
+        btCredit = Bitmap.createScaledBitmap(btCredit, screenWidth/2, 180, true);
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawBitmap(btBet, screenWidth/2-btBet.getWidth()/2, screenHeight-btBet.getHeight()*3, null);
+        canvas.drawBitmap(btBet, screenWidth-btBet.getWidth(), 0, null);
+        canvas.drawBitmap(btCredit, 0, 0, null);
     }
 
 
